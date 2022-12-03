@@ -1,11 +1,16 @@
 ---
 data:
   libraryCategories:
-  - name: .
+  - name: data structure
     pages:
     - icon: ':warning:'
-      path: fenwick.cpp
-      title: fenwick.cpp
+      path: data structure/fenwick.cpp
+      title: data structure/fenwick.cpp
+  - name: tests/datastructure
+    pages:
+    - icon: ':warning:'
+      path: tests/datastructure/pointAddRangeQuery.cpp
+      title: tests/datastructure/pointAddRangeQuery.cpp
   verificationCategories:
   - name: .
     pages:
