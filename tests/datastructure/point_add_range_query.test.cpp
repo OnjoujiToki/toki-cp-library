@@ -35,7 +35,7 @@ struct FenwickTree {
 
   T sum(int l, int r) { return sum(r) - sum(l - 1); }
 
-  void add(int idx, int delta) {
+  void add(int idx, T delta) {
     for (; idx < n; idx = idx | (idx + 1)) bit[idx] += delta;
   }
 };
@@ -43,9 +43,9 @@ struct FenwickTree {
 void solve() {
   int N, Q;
   std::cin >> N >> Q;
-  std::vector<int> a(N);
+  std::vector<long long> a(N);
   for (int& x : a) std::cin >> x;
-  FenwickTree<int> tree(a);
+  FenwickTree<long long> tree(a);
   while (Q--) {
     int op, a, b;
     std::cin >> op >> a >> b;
