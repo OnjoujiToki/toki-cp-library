@@ -24,8 +24,8 @@ struct FenwickTree {
   int n;
   FenwickTree(int _n) : n(_n), bit(_n) {}
   FenwickTree(std::vector<T> a) {
-    bit.resize(n, 0);
-    for (int i = 0; i < (int)a.size(); i++) add(i, (int)a[i]);
+    bit = a;
+    for (int i = 0; i < (int)a.size(); i++) add(i, a[i]);
   }
   T sum(int r) {
     int ret = 0;
