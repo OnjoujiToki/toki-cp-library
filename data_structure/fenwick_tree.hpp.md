@@ -36,8 +36,9 @@ data:
   - tests/data_structure/point_add_range_query.test.cpp
 documentation_of: data_structure/fenwick_tree.hpp
 layout: document
-redirect_from:
-- /library/data_structure/fenwick_tree.hpp
-- /library/data_structure/fenwick_tree.hpp.html
-title: data_structure/fenwick_tree.hpp
+title: Fenwick Tree
 ---
+
+## Description
+
+In this file, ...

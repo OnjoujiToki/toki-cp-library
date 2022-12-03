@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: data_structure/fenwick_tree.hpp
-    title: data_structure/fenwick_tree.hpp
+    title: Fenwick Tree
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
