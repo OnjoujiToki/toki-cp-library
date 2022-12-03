@@ -44,7 +44,7 @@ void solve() {
   int N, Q;
   std::cin >> N >> Q;
   std::vector<long long> a(N);
-  for (int& x : a) std::cin >> x;
+  for (auto& x : a) std::cin >> x;
   FenwickTree<long long> tree(a);
   while (Q--) {
     int op, a, b;
