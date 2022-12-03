@@ -17,5 +17,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: example.test.cpp
       title: example.test.cpp
+  - name: tests/datastructure
+    pages:
+    - icon: ':x:'
+      path: tests/datastructure/point_add_range_query.test.cpp
+      title: tests/datastructure/point_add_range_query.test.cpp
 layout: toppage
 ---
