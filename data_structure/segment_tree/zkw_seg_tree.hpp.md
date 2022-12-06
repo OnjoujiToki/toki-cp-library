@@ -73,7 +73,7 @@ data:
   - tests/data_structure/point_add_range_min.test.cpp
 documentation_of: data_structure/segment_tree/zkw_seg_tree.hpp
 layout: document
-title: ZKW Seg_tree
+title: ZKW Segment Tree
 ---
 
 ## Description

@@ -10,7 +10,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree/zkw_seg_tree.hpp
-      title: ZKW Seg_tree
+      title: ZKW Segment Tree
   verificationCategories:
   - name: tests/data_structure
     pages:
