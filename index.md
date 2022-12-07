@@ -11,14 +11,14 @@ data:
     - icon: ':heavy_check_mark:'
       path: data_structure/segment_tree/zkw_seg_tree.hpp
       title: ZKW Segment Tree
-  - name: graph
+  - name: graph/shortest_path
     pages:
     - icon: ':warning:'
-      path: graph/dijkstra_priority_queue.hpp
-      title: graph/dijkstra_priority_queue.hpp
+      path: graph/shortest_path/dijkstra_priority_queue.hpp
+      title: Dijkstra By Priority Queue
     - icon: ':warning:'
-      path: graph/spfa.hpp
-      title: graph/spfa.hpp
+      path: graph/shortest_path/spfa.hpp
+      title: graph/shortest_path/spfa.hpp
   verificationCategories:
   - name: tests/data_structure
     pages:
