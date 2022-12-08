@@ -14,6 +14,9 @@ data:
   - name: graph/shortest_path
     pages:
     - icon: ':warning:'
+      path: graph/shortest_path/dijkstra_dense_graph.hpp
+      title: graph/shortest_path/dijkstra_dense_graph.hpp
+    - icon: ':warning:'
       path: graph/shortest_path/dijkstra_priority_queue.hpp
       title: Dijkstra By Priority Queue
     - icon: ':warning:'
