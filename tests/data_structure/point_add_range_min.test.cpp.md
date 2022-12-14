@@ -20,9 +20,8 @@ data:
     #include <cstring>\n#include <ctime>\n#include <deque>\n#include <iomanip>\n#include\
     \ <iostream>\n#include <map>\n#include <numeric>\n#include <queue>\n#include <set>\n\
     #include <sstream>\n#include <tuple>\n#include <unordered_map>\n#include <unordered_set>\n\
-    #include <vector>\n\n#line 3 \"data_structure/segment_tree/zkw_seg_tree.hpp\"\n\
-    #include <limits>\n#line 5 \"data_structure/segment_tree/zkw_seg_tree.hpp\"\n\n\
-    template <typename T>\nstruct SegmentTree {\n  using Monoid = typename T::Monoid;\n\
+    #include <vector>\n\n#line 2 \"data_structure/segment_tree/zkw_seg_tree.hpp\"\n\
+    \ntemplate <typename T>\nstruct SegmentTree {\n  using Monoid = typename T::Monoid;\n\
     \n  explicit SegmentTree(int n) : SegmentTree(std::vector<Monoid>(n, T::id()))\
     \ {}\n\n  explicit SegmentTree(const std::vector<Monoid>& a) : n(a.size()), sz(1)\
     \ {\n    while (sz < n) sz <<= 1;\n    data.assign(sz << 1, T::id());\n    std::copy(a.begin(),\
@@ -73,7 +72,7 @@ data:
   isVerificationFile: true
   path: tests/data_structure/point_add_range_min.test.cpp
   requiredBy: []
-  timestamp: '2022-12-05 18:04:03-08:00'
+  timestamp: '2022-12-13 23:45:22-05:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/data_structure/point_add_range_min.test.cpp
