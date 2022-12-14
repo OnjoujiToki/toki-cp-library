@@ -32,5 +32,5 @@ struct MedianHeaps {
       return maxHeap.top();
   }
 
-  T findLeftMedian() { return max_Heap.top(); }
+  T findLeftMedian() { return maxHeap.top(); }
 };
