@@ -1,7 +1,4 @@
 #pragma once
-#include <algorithm>
-#include <limits>
-#include <vector>
 
 template <typename T>
 struct SegmentTree {
