@@ -20,7 +20,7 @@ data:
     \ - (int)minHeap.size()) <= 1);\n  }\n\n  double findMedian() {\n    if (maxHeap.size()\
     \ == minHeap.size()) {\n      return double(maxHeap.top() + minHeap.top()) / 2.0;\n\
     \    } else\n      return maxHeap.top();\n  }\n\n  T findLeftMedian() { return\
-    \ max_Heap.top(); }\n};\n"
+    \ maxHeap.top(); }\n};\n"
   code: "template <typename T>\nstruct MedianHeaps {\n public:\n  std::priority_queue<T>\
     \ maxHeap;\n  std::priority_queue<T, vector<T>, std::greater<T>> minHeap;\n  MedianHeaps(){};\n\
     \  void addNum(int num) {\n    if (maxHeap.size() == minHeap.size()) {\n     \
@@ -32,12 +32,12 @@ data:
     \ - (int)minHeap.size()) <= 1);\n  }\n\n  double findMedian() {\n    if (maxHeap.size()\
     \ == minHeap.size()) {\n      return double(maxHeap.top() + minHeap.top()) / 2.0;\n\
     \    } else\n      return maxHeap.top();\n  }\n\n  T findLeftMedian() { return\
-    \ max_Heap.top(); }\n};"
+    \ maxHeap.top(); }\n};"
   dependsOn: []
   isVerificationFile: false
   path: data_structure/segment_tree/heap/two_heap_median.hpp
   requiredBy: []
-  timestamp: '2022-12-13 23:45:22-05:00'
+  timestamp: '2022-12-13 23:48:25-05:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/segment_tree/heap/two_heap_median.hpp
