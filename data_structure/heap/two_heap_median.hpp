@@ -3,21 +3,33 @@ struct MedianHeaps {
  public:
   std::priority_queue<T> maxHeap;
   std::priority_queue<T, vector<T>, std::greater<T>> minHeap;
-  MedianHeaps(){};
+  long long min_sum;
+  long long max_sum;
+  MedianHeaps(){min_sum = 0, max_sum = 0;};
   void addNum(int num) {
     if (maxHeap.size() == minHeap.size()) {
-      if (minHeap.empty() || num <= minHeap.top())
+      if (maxHeap.empty() || num <= minHeap.top()) {
         maxHeap.push(num);
+        max_sum += num;
+      }
       else {
         maxHeap.push(minHeap.top());
-        minHeap.pop();
+        max_sum += minHeap.top();
+        
         minHeap.push(num);
+        min_sum -= minHeap.top();
+        minHeap.pop();
+        min_sum += num;
       }
     } else {
       if (num >= maxHeap.top()) {
         minHeap.push(num);
+        min_sum += num;
       } else {
         minHeap.push(maxHeap.top());
+        min_sum += maxHeap.top();
+        max_sum -= maxHeap.top();
+        max_sum += num;
         maxHeap.pop();
         maxHeap.push(num);
       }
@@ -32,5 +44,9 @@ struct MedianHeaps {
       return maxHeap.top();
   }
 
-  T findLeftMedian() { return maxHeap.top(); }
+  T findLeftMedian() {
+      if (minHeap.size() == maxHeap.size()) return minHeap.top();
+      return maxHeap.top();   
+  }
 };
+
