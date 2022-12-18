@@ -9,10 +9,10 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"data_structure/segment_tree/zky_seg_tree_range.hpp\"\n//\
-    \ credit emthrm.github.io/library\n#include <algorithm>\n#include <limits>\n#include\
-    \ <vector>\n\ntemplate <typename T>\nstruct LazySegmentTree {\n  using Monoid\
-    \ = typename T::Monoid;\n  using LazyMonoid = typename T::LazyMonoid;\n\n  explicit\
-    \ LazySegmentTree(const int n)\n      : LazySegmentTree(std::vector<Monoid>(n,\
+    \ credit: emthrm.github.io/library\n#include <algorithm>\n#include <limits>\n\
+    #include <vector>\n\ntemplate <typename T>\nstruct LazySegmentTree {\n  using\
+    \ Monoid = typename T::Monoid;\n  using LazyMonoid = typename T::LazyMonoid;\n\
+    \n  explicit LazySegmentTree(const int n)\n      : LazySegmentTree(std::vector<Monoid>(n,\
     \ T::m_id())) {}\n\n  explicit LazySegmentTree(const std::vector<Monoid>& a)\n\
     \      : n(a.size()), height(0) {\n    while ((1 << height) < n) ++height;\n \
     \   sz = 1 << height;\n    lazy.assign(sz, T::lazy_id());\n    data.assign(sz\
@@ -118,7 +118,7 @@ data:
     \ LazyMonoid& a, const LazyMonoid& b) {\n    return a + b;\n  }\n  static Monoid\
     \ apply(const Monoid& a, const LazyMonoid& b) {\n    return Monoid{a.sum + b *\
     \ a.len, a.len};\n  }\n};\n\n}  // namespace monoid\n"
-  code: "#pragma once\n// credit emthrm.github.io/library\n#include <algorithm>\n\
+  code: "#pragma once\n// credit: emthrm.github.io/library\n#include <algorithm>\n\
     #include <limits>\n#include <vector>\n\ntemplate <typename T>\nstruct LazySegmentTree\
     \ {\n  using Monoid = typename T::Monoid;\n  using LazyMonoid = typename T::LazyMonoid;\n\
     \n  explicit LazySegmentTree(const int n)\n      : LazySegmentTree(std::vector<Monoid>(n,\
@@ -231,7 +231,7 @@ data:
   isVerificationFile: false
   path: data_structure/segment_tree/zky_seg_tree_range.hpp
   requiredBy: []
-  timestamp: '2022-12-18 18:41:05-05:00'
+  timestamp: '2022-12-18 18:47:30-05:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: data_structure/segment_tree/zky_seg_tree_range.hpp
