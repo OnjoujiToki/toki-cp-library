@@ -19,6 +19,11 @@ data:
     - icon: ':warning:'
       path: data_structure/segment_tree/zky_seg_tree_range.hpp
       title: data_structure/segment_tree/zky_seg_tree_range.hpp
+  - name: graph/flow
+    pages:
+    - icon: ':warning:'
+      path: graph/flow/mf_graph.hpp
+      title: graph/flow/mf_graph.hpp
   - name: graph/shortest_path
     pages:
     - icon: ':warning:'

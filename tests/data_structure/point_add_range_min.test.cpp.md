@@ -21,17 +21,17 @@ data:
     \ <iostream>\n#include <map>\n#include <numeric>\n#include <queue>\n#include <set>\n\
     #include <sstream>\n#include <tuple>\n#include <unordered_map>\n#include <unordered_set>\n\
     #include <vector>\n\n#line 2 \"data_structure/segment_tree/zkw_seg_tree.hpp\"\n\
-    \ntemplate <typename T>\nstruct SegmentTree {\n  using Monoid = typename T::Monoid;\n\
-    \n  explicit SegmentTree(int n) : SegmentTree(std::vector<Monoid>(n, T::id()))\
-    \ {}\n\n  explicit SegmentTree(const std::vector<Monoid>& a) : n(a.size()), sz(1)\
-    \ {\n    while (sz < n) sz <<= 1;\n    data.assign(sz << 1, T::id());\n    std::copy(a.begin(),\
-    \ a.end(), data.begin() + sz);\n    for (int i = sz - 1; i > 0; --i) {\n     \
-    \ data[i] = T::merge(data[i << 1], data[(i << 1) + 1]);\n    }\n  }\n\n  void\
-    \ set(int idx, const Monoid val) {\n    idx += sz;\n    data[idx] = val;\n   \
-    \ while (idx >>= 1)\n      data[idx] = T::merge(data[idx << 1], data[(idx << 1)\
-    \ + 1]);\n  }\n\n  Monoid get(int left, int right) const {\n    Monoid res_l =\
-    \ T::id(), res_r = T::id();\n    for (left += sz, right += sz; left < right; left\
-    \ >>= 1, right >>= 1) {\n      if (left & 1) res_l = T::merge(res_l, data[left++]);\n\
+    // credit emthrm.github.io/library\ntemplate <typename T>\nstruct SegmentTree\
+    \ {\n  using Monoid = typename T::Monoid;\n\n  explicit SegmentTree(int n) : SegmentTree(std::vector<Monoid>(n,\
+    \ T::id())) {}\n\n  explicit SegmentTree(const std::vector<Monoid>& a) : n(a.size()),\
+    \ sz(1) {\n    while (sz < n) sz <<= 1;\n    data.assign(sz << 1, T::id());\n\
+    \    std::copy(a.begin(), a.end(), data.begin() + sz);\n    for (int i = sz -\
+    \ 1; i > 0; --i) {\n      data[i] = T::merge(data[i << 1], data[(i << 1) + 1]);\n\
+    \    }\n  }\n\n  void set(int idx, const Monoid val) {\n    idx += sz;\n    data[idx]\
+    \ = val;\n    while (idx >>= 1)\n      data[idx] = T::merge(data[idx << 1], data[(idx\
+    \ << 1) + 1]);\n  }\n\n  Monoid get(int left, int right) const {\n    Monoid res_l\
+    \ = T::id(), res_r = T::id();\n    for (left += sz, right += sz; left < right;\
+    \ left >>= 1, right >>= 1) {\n      if (left & 1) res_l = T::merge(res_l, data[left++]);\n\
     \      if (right & 1) res_r = T::merge(data[--right], res_r);\n    }\n    return\
     \ T::merge(res_l, res_r);\n  }\n\n  Monoid operator[](const int idx) const { return\
     \ data[idx + sz]; }\n\n private:\n  const int n;\n  int sz;  // sz + \u539F\u6570\
@@ -72,7 +72,7 @@ data:
   isVerificationFile: true
   path: tests/data_structure/point_add_range_min.test.cpp
   requiredBy: []
-  timestamp: '2022-12-13 23:45:22-05:00'
+  timestamp: '2022-12-18 18:41:05-05:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: tests/data_structure/point_add_range_min.test.cpp
