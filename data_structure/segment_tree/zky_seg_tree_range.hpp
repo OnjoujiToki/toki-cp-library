@@ -1,4 +1,5 @@
 #pragma once
+// credit emthrm.github.io/library
 #include <algorithm>
 #include <limits>
 #include <vector>

@@ -1,5 +1,5 @@
 #pragma once
-
+// credit emthrm.github.io/library
 template <typename T>
 struct SegmentTree {
   using Monoid = typename T::Monoid;
